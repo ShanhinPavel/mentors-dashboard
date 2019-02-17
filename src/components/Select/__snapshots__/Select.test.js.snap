@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Should render "View" correctly in "debug" mode 1`] = `
+<div
+  style={
+    Object {
+      "border": "2px solid black",
+      "display": "flex",
+      "flexDirection": "row",
+      "fontSize": 18,
+      "height": "30px",
+      "width": "30%",
+    }
+  }
+>
+  <p
+    style={
+      Object {
+        "borderRight": "1px solid black",
+        "margin": 0,
+        "paddingTop": 3,
+        "textAlign": "center",
+        "width": "50%",
+      }
+    }
+  >
+    Mentor
+  </p>
+  <select
+    id="great-names"
+    style={
+      Object {
+        "border": "none",
+        "textAlign": "center",
+        "width": "50%",
+      }
+    }
+  >
+    <option>
+      Choose mentor
+    </option>
+  </select>
+</div>
+`;

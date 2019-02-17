@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Should render "View" correctly in "debug" mode 1`] = `
+<div
+  className="table"
+  style={
+    Object {
+      "border": "2px solid black",
+      "display": "flex",
+      "flexDirection": "column",
+      "minWidth": 320,
+      "width": "fit-content",
+    }
+  }
+>
+  <div
+    className="table__header"
+    style={
+      Object {
+        "borderBottom": "2px solid black",
+        "display": "flex",
+        "flexDirection": "row",
+        "minHeight": 30,
+      }
+    }
+  >
+    <div
+      className="header__task-column"
+      style={
+        Object {
+          "borderRight": "2px solid black",
+          "minWidth": 220,
+          "textAlign": "center",
+          "widht": "44%",
+        }
+      }
+    >
+      <h3>
+        Tasks
+      </h3>
+    </div>
+    <div
+      className="header__students-column"
+      style={
+        Object {
+          "minWidth": 100,
+          "textAlign": "center",
+          "width": "66%",
+        }
+      }
+    >
+      <h3>
+        Students
+      </h3>
+    </div>
+  </div>
+  <div
+    className="table__body"
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <div
+      className="tasksColumn"
+      style={
+        Object {
+          "borderRight": "2px solid black",
+          "display": "flex",
+          "flexDirection": "column",
+          "minWidth": 220,
+        }
+      }
+    />
+    <div
+      className="students-rows"
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "minWidth": 100,
+        }
+      }
+    />
+  </div>
+</div>
+`;
