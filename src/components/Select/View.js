@@ -4,6 +4,7 @@ import { selectContainer, mentorP, select } from '../../styles/select';
 
 function View(props) {
   const { onChange, optionElements } = props;
+
   return (
     <div style={selectContainer}>
       <p style={mentorP}>Mentor</p>

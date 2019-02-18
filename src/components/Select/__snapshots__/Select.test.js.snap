@@ -9,7 +9,8 @@ exports[`Select Should render "View" correctly in "debug" mode 1`] = `
       "flexDirection": "row",
       "fontSize": 18,
       "height": "30px",
-      "width": "30%",
+      "minWidth": "150px",
+      "width": "40%",
     }
   }
 >
