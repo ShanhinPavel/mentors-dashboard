@@ -1,7 +1,8 @@
 export const selectContainer = {
   display: 'flex',
   flexDirection: 'row',
-  width: '30%',
+  width: '40%',
+  minWidth: '150px',
   height: '30px',
   border: '2px solid black',
   fontSize: 18,

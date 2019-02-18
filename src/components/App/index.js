@@ -2,6 +2,8 @@
 import React from 'react';
 import { instanceOf, string } from 'prop-types';
 import Select from '../Select';
+import LoginButton from '../Login/index';
+// import containerStyle from '../../styles/app';
 
 function App(props) {
   const { data } = props;
@@ -13,7 +15,10 @@ function App(props) {
   }
 
   return (
-    <Select data={allMentorsNames} name={name} tasks={tasks} mentors={mentor} />
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
+      <Select data={allMentorsNames} name={name} tasks={tasks} mentors={mentor} />
+      <LoginButton flag="true" />
+    </div>
   );
 }
 
