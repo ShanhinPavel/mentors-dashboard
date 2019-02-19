@@ -13,7 +13,7 @@ function LoginButton(props) {
 
   return (
     <div style={buttonStyle}>
-      <a href="http://google.com" style={{ textDecoration: 'none' }}>{buttonTitle}</a>
+      <a href="http://localhost:3000/" style={{ textDecoration: 'none' }}>{buttonTitle}</a>
     </div>
   );
 }
