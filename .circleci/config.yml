@@ -35,4 +35,13 @@ jobs:
 
       # run tests!
       - run: npm run test
-      - run: npm run deploy
+
+  deployment:
+    staging:
+      branch: master
+      commands:
+        - ./scripts/deploy-ghpages.sh build
+      
+
+
+  
