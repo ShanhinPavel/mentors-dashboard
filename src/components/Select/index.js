@@ -2,7 +2,7 @@ import React from 'react';
 import { arrayOf, string, instanceOf } from 'prop-types';
 import Controller from './Controller';
 import Table from '../Table';
-import containerStyle from '../../styles/app';
+import { containerStyle } from '../../styles/select';
 
 class Select extends React.Component {
   constructor(props) {

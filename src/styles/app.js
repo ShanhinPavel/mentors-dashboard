@@ -1,9 +1,16 @@
-const containerStyle = {
+export const appStyle = {
   display: 'flex',
   flexDirection: 'column',
-  minWidth: 300,
-  minHeight: 350,
+  alignItems: 'center',
   justifyContent: 'space-between',
+  minHeight: 450,
+  backgroundColor: 'chocolate',
 };
 
-export default containerStyle;
+export const tableWraper = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  minHeight: 600,
+};

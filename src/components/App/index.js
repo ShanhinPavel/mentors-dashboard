@@ -2,8 +2,9 @@
 import React from 'react';
 import { instanceOf, string } from 'prop-types';
 import Select from '../Select';
-import LoginButton from '../Login/index';
-// import containerStyle from '../../styles/app';
+import Header from '../Header/index';
+import { tableWraper, appStyle } from '../../styles/app';
+import Designations from '../Designations';
 
 function App(props) {
   const { data } = props;
@@ -15,9 +16,12 @@ function App(props) {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <Select data={allMentorsNames} name={name} tasks={tasks} mentors={mentor} />
-      <LoginButton flag="true" />
+    <div className="one" style={appStyle}>
+      <Header />
+      <div style={tableWraper}>
+        <Select data={allMentorsNames} name={name} tasks={tasks} mentors={mentor} />
+        <Designations />
+      </div>
     </div>
   );
 }

@@ -7,6 +7,8 @@ export const table = {
   minWidth: 320,
   border: '2px solid black',
   width: 'fit-content',
+  backgroundColor: 'white',
+  marginBottom: '20px',
 };
 
 /*
