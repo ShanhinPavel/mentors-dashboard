@@ -4,7 +4,7 @@ export const appStyle = {
   alignItems: 'center',
   justifyContent: 'space-between',
   minHeight: 450,
-  backgroundColor: 'chocolate',
+  backgroundColor: 'lightsteelblue',
 };
 
 export const tableWraper = {
