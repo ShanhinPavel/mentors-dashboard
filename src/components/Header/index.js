@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-/* eslint-disable class-methods-use-this */
 import React from 'react';
 import PropTypes from 'prop-types';
 import View from './View';
@@ -23,31 +22,32 @@ class Header extends React.Component {
     const { changePermission } = this.props;
     const { userName } = this.state;
     changePermission(userName);
+    this.setState({ userName: '' });
   }
 
   logout() {
     const { changePermission } = this.props;
-    changePermission('');
+    changePermission('logout');
   }
 
   render() {
-    const { userStatus, userName } = this.props;
-    const data = { userStatus };
+    const { data } = this.props;
+    const { userStatus, userName, message } = data;
+    const info = { userStatus, message };
 
     if (userStatus === 'authorised') {
-      data.userName = userName;
+      info.userName = userName;
     }
 
     return (
-      <View data={data} onClickLogin={this.login} onClickLogout={this.logout} handleChange={this.handleChange} />
+      <View data={info} onClickLogin={this.login} onClickLogout={this.logout} handleChange={this.handleChange} />
     );
   }
 }
 
 Header.propTypes = {
   changePermission: PropTypes.func.isRequired,
-  userStatus: PropTypes.string.isRequired,
-  userName: PropTypes.string.isRequired,
+  data: PropTypes.objectOf(PropTypes.string),
 };
 
 

@@ -1,15 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { headerButton, headerP } from '../../styles/header';
-
-const containerStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-evenly',
-  alignItems: 'center',
-  marginRight: 10,
-  minHeight: 'inherit',
-};
+import containerStyle from '../../styles/logout';
 
 function Logout(props) {
   const { onClickLogout, userName } = props;

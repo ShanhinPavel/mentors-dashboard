@@ -9,13 +9,13 @@ function View(props) {
     data, onClickLogin, onClickLogout, handleChange,
   } = props;
   // const { authStatus, userName } = data;
-  const { userName, userStatus } = data;
+  const { userName, userStatus, message } = data;
 
   return (
     <div className="header" style={containerStyle}>
       <h2 style={{ marginLeft: 10 }}>Mentor dashboard</h2>
       {userStatus === 'unauthorised'
-        ? <Login onClickLogin={onClickLogin} change={handleChange} />
+        ? <Login onClickLogin={onClickLogin} change={handleChange} message={message} />
         : <Logout onClickLogout={onClickLogout} userName={userName} />
           }
     </div>

@@ -5,28 +5,36 @@ import Select from '../Select';
 import Header1 from '../Header/index';
 import { tableWraper, appStyle } from '../../styles/app';
 import Designations from '../Designations';
+import Info from '../Info';
+import checkMentorName from './utils/checkMentorName';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { userStatus: 'unauthorised', userName: null };
+    this.state = { userStatus: 'unauthorised', userName: null, message: null };
     this.changeUserPermission = this.changeUserPermission.bind(this);
   }
 
+  /*
+    *This function examines if user is a mentor of Rolling scopes school.
+    Depend on mentor's checking  we set a permission of watching some part of application for user.
+  */
   changeUserPermission(inputText) {
     const { data } = this.props;
-    const { allMentorsNames } = data;
+    const { mentor } = data;
 
-    const mentorName = inputText.toLowerCase();
-    const condition = allMentorsNames.includes(mentorName);
+    const checkedMentor = checkMentorName(inputText, mentor);
+    const { condition, mentorName } = checkedMentor;
 
     if (condition) {
-      this.setState({ userStatus: 'authorised', userName: mentorName });
-    } else this.setState({ userStatus: 'unauthorised' });
+      this.setState({ userStatus: 'authorised', userName: mentorName, message: null });
+    } if (!condition && (mentorName !== 'logout' || '')) {
+      this.setState({ userStatus: 'unauthorised', message: 'error' });
+    } else if (!condition) this.setState({ userStatus: 'unauthorised' });
   }
 
   render() {
-    const { userStatus, userName } = this.state;
+    const { userStatus, userName, message } = this.state;
     const { data } = this.props;
     let { name } = this.props;
     const { allMentorsNames, mentor, tasks } = data;
@@ -37,9 +45,9 @@ class App extends React.Component {
 
     return (
       <div className="one" style={appStyle}>
-        <Header1 changePermission={this.changeUserPermission} userStatus={userStatus} userName={userName} />
+        <Header1 changePermission={this.changeUserPermission} data={{ userStatus, userName, message }} />
         {userStatus === 'unauthorised'
-          ? <p>This application shows mentors their student.</p>
+          ? <Info />
           : (
             <div style={tableWraper}>
               <Select data={allMentorsNames} name={name} tasks={tasks} mentors={mentor} />
