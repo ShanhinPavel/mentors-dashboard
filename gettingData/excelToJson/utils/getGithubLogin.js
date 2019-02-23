@@ -17,4 +17,4 @@ function getGithubLogin(githubLink) {
   return githubLogin;
 }
 
-export default getGithubLogin;
+module.exports = getGithubLogin;

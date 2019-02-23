@@ -17,6 +17,7 @@ exports[`Select Should render "View" correctly in "debug" mode 1`] = `
   <p
     style={
       Object {
+        "backgroundColor": "white",
         "borderRight": "1px solid black",
         "margin": 0,
         "paddingTop": 3,

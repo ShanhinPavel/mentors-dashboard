@@ -1,14 +1,14 @@
 export const markingTask = {
-  green: 'Task was done',
-  red: 'Task is doing',
-  yellow: 'Task is doing',
-  gray: 'task is not doing',
+  green: 'The task was checked',
+  red: 'The task needs to be checked.',
+  yellow: 'The task is making by students',
+  gray: 'The task has not been set yet',
 };
 
 export const markingStudents = {
-  darkRed: 'Task was done',
-  red: 'Task was done',
-  green: 'Task was done',
-  gray: 'Task was done',
-  yellow: 'Task was done',
+  darkRed: 'The task was not passed',
+  red: 'Task is checking',
+  green: 'The task was passed',
+  gray: 'The task has not been set yet',
+  yellow: 'The task is doing',
 };

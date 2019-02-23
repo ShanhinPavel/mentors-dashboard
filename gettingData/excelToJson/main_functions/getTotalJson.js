@@ -1,4 +1,4 @@
-import cloneObject from '../utils/cloneObject';
+const cloneObject = require('../utils/cloneObject');
 /*
   *This function creates json which contains tasks and mentors with students
   *This function takes three parametres.
@@ -33,4 +33,4 @@ function getTotalJson(mentorCollection, studentCollection, taskCollection) {
   return JSON.stringify(totalJson);
 }
 
-export default getTotalJson;
+module.exports = getTotalJson;

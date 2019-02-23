@@ -1,5 +1,5 @@
-import { readFile, utils } from 'xlsx';
-import { join } from 'path';
+const { readFile, utils } = require('xlsx');
+const { join } = require('path');
 /*
   *This function takes filename, opens excel file,
   *each row with some data transforms into a json's object
@@ -20,4 +20,4 @@ function getWorkbook(filename, sheetNumber) {
   return arrayOfJsonObjects;
 }
 
-export default getWorkbook;
+module.exports = getWorkbook;

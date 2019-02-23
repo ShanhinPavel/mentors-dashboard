@@ -39,4 +39,4 @@ class Mentor {
   }
 }
 
-export default Mentor;
+module.exports = Mentor;

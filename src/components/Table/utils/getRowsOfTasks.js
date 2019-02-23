@@ -18,7 +18,7 @@ const getRowsOfTasks = (objectOfTasks) => {
     return (
       <div className="row__task" key={`task_${taskId}`} style={taskRow}>
         <div className="task__cell" style={colorStatus}>
-          <a href={link}>
+          <a href={link} target="_blank" rel="noopener noreferrer">
             {title}
           </a>
         </div>

@@ -12,11 +12,11 @@ function View(props) {
       <h2 style={desinationTitle}>Designations</h2>
       <div style={listContainer}>
         <div>
-          <h3 style={listTitle}>Task marking</h3>
+          <h3 style={listTitle}>Tasks status</h3>
           {tasksMarkers}
         </div>
         <div>
-          <h3 style={listTitle}>Task marking</h3>
+          <h3 style={listTitle}>Task perfoming by students</h3>
           {studentMarkers}
         </div>
       </div>

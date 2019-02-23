@@ -13,4 +13,4 @@ function cloneTaskCollection(collection) {
   return newTaskCollection;
 }
 
-export default cloneTaskCollection;
+module.exports = cloneTaskCollection;

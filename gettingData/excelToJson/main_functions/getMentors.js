@@ -1,5 +1,5 @@
-import getGithubLogin from '../utils/getGithubLogin';
-import Mentor from '../classes/Mentor';
+const getGithubLogin = require('../utils/getGithubLogin');
+const Mentor = require('../classes/Mentor');
 /*
   *This function takes mentor's sheet and create mentor's collection
 */
@@ -29,4 +29,4 @@ function getMentors(sheetOfMentors) {
 
   return objectOfMentors;
 }
-export default getMentors;
+module.exports = getMentors;

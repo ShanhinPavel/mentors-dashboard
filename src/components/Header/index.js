@@ -1,39 +1,54 @@
+/* eslint-disable max-len */
 /* eslint-disable class-methods-use-this */
 import React from 'react';
 import PropTypes from 'prop-types';
 import View from './View';
-import fb from '../../firebase_service';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { authorisation: 'unauthorised', user: 'kolia' };
+    this.state = { userName: null };
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    const inputText = event.target.value;
+    this.setState({ userName: inputText });
   }
 
   login() {
-    fb.login().then((result) => {
-      console.log('Sign-in successful');
-      console.log(result.user);
-      // this.setState({ authorisation: 'authorised', user: result.user });
-    });
+    const { changePermission } = this.props;
+    const { userName } = this.state;
+    changePermission(userName);
   }
 
   logout() {
-    fb.logout().then(() => {
-      console.log('Sign-out successful');
-      this.setState({ authorisation: 'unauthorised' });
-    });
+    const { changePermission } = this.props;
+    changePermission('');
   }
 
   render() {
-    const { authorisation } = this.state;
+    const { userStatus, userName } = this.props;
+    const data = { userStatus };
+
+    if (userStatus === 'authorised') {
+      data.userName = userName;
+    }
+
     return (
-      <View authorisation={authorisation} onClickLogin={this.login} onClickLogout={this.logout} />
+      <View data={data} onClickLogin={this.login} onClickLogout={this.logout} handleChange={this.handleChange} />
     );
   }
 }
+
+Header.propTypes = {
+  changePermission: PropTypes.func.isRequired,
+  userStatus: PropTypes.string.isRequired,
+  userName: PropTypes.string.isRequired,
+};
+
 
 export default Header;

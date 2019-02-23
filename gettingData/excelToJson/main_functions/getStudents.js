@@ -1,6 +1,6 @@
-import getGithubLogin from '../utils/getGithubLogin';
-import Student from '../classes/Student';
-import getTasks from './getTasks';
+const getGithubLogin = require('../utils/getGithubLogin');
+const Student = require('../classes/Student');
+const getTasks = require('./getTasks');
 /*
 *This function get three collection of tasks and return collection of students.
 */
@@ -37,14 +37,14 @@ function getStudents(mentorScore, sheetWithTasks) {
       students[studentGithub] = student; // add student to students object
     }
 
-    // Take student from student collection and set task properties
+    // Take student = require student collection and set task properties
     const taskTitle = solvedTask['Таск'];
     const taskObject = students[studentGithub].tasks[taskTitle];
     const pullReqLink = solvedTask['Ссылка на Pull Request'];
     const mark = solvedTask['Оценка'];
     /*
     *Fill in properties
-     Set property mark to mark from sheet or if task isn't solved mark be 0
+     Set property mark to mark = require sheet or if task isn't solved mark be 0
     */
     taskObject.mark = mark;
     taskObject.pullRequest = pullReqLink;
@@ -53,4 +53,4 @@ function getStudents(mentorScore, sheetWithTasks) {
   return students;
 }
 
-export default getStudents;
+module.exports = getStudents;

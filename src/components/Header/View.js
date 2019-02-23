@@ -1,19 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { containerStyle, headerButton, headerP } from '../../styles/header';
+import { containerStyle } from '../../styles/header';
+import Login from '../Log-in';
+import Logout from '../Log-out';
 
 function View(props) {
-  const { authorisation, onClickLogin, onClickLogout } = props;
+  const {
+    data, onClickLogin, onClickLogout, handleChange,
+  } = props;
+  // const { authStatus, userName } = data;
+  const { userName, userStatus } = data;
 
   return (
     <div className="header" style={containerStyle}>
       <h2 style={{ marginLeft: 10 }}>Mentor dashboard</h2>
-      <div>
-        {authorisation === 'unauthorised'
-          ? <button type="submit" onClick={onClickLogout} style={headerButton}>Sing in</button>
-          : <button type="submit" onClick={onClickLogin} style={headerButton}>Sing out</button>
-        }
-      </div>
+      {userStatus === 'unauthorised'
+        ? <Login onClickLogin={onClickLogin} change={handleChange} />
+        : <Logout onClickLogout={onClickLogout} userName={userName} />
+          }
     </div>
   );
 }
@@ -21,7 +25,8 @@ function View(props) {
 View.propTypes = {
   onClickLogout: PropTypes.func.isRequired,
   onClickLogin: PropTypes.func.isRequired,
-  authorisation: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
 

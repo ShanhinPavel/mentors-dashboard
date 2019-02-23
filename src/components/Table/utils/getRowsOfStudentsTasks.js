@@ -23,7 +23,7 @@ const getRowsOfStudentsTasks = (objectOfMentor, objectOfTasks) => {
       return (
         <div className="student-column" key={`${github}-task_${taskNumber}`} style={studentColumn}>
           <div style={colorStatus}>
-            <a href={pullRequest}>{mark}</a>
+            <a href={pullRequest} target="_blank" rel="noopener noreferrer">{mark}</a>
           </div>
         </div>
       );

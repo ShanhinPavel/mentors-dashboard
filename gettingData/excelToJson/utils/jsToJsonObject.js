@@ -5,4 +5,4 @@ function jsToJson(object) {
   return JSON.stringify(object);
 }
 
-export default jsToJson;
+module.exports = jsToJson;

@@ -1,8 +1,8 @@
 export const designationContainer = {
   display: 'flex',
   flexDirection: 'column',
-  minWidth: 400,
-  width: '30%',
+  minWidth: 500,
+  width: '40%',
   border: '1px solid black',
 };
 

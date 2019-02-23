@@ -1,4 +1,4 @@
-import Task from '../classes/Task';
+const Task = require('../classes/Task');
 /*
   *This function takes sheet of tasks and returns collection of tasks
   If argumnet 'flag' is true we add additional properties to class Task
@@ -46,8 +46,11 @@ function getTasks(sheetOfTasks, flag) {
       tasksObjects[titleOfTask] = new Task(titleOfTask, taskLink, taskStatus);
     }
   });
+  // Add link to "Course work"
+  const courseWork = tasksObjects['Course work'];
+  courseWork.link = 'https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/rss-mentor-dashboard.md';
 
   return tasksObjects;
 }
 
-export default getTasks;
+module.exports = getTasks;

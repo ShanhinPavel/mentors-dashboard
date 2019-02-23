@@ -12,4 +12,4 @@ function editData(arrayOfJson) {
   return arrayOfValidJsonObjects;
 }
 
-export default editData;
+module.exports = editData;

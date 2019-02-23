@@ -5,9 +5,11 @@ exports[`Table Should render "View" correctly in "debug" mode 1`] = `
   className="table"
   style={
     Object {
+      "backgroundColor": "white",
       "border": "2px solid black",
       "display": "flex",
       "flexDirection": "column",
+      "marginBottom": "20px",
       "minWidth": 320,
       "width": "fit-content",
     }

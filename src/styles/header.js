@@ -6,21 +6,18 @@ export const containerStyle = {
   alignItems: 'center',
   width: '100%',
   backgroundColor: 'cadetblue',
-  minHeight: '70px',
+  minHeight: '100px',
 };
 
 export const headerButton = {
   fontSize: 20,
-  marginRight: 10,
-  minWidth: 150,
+  maxWidth: 100,
   minheight: 30,
 };
 
 export const headerP = {
   fontSize: 20,
-  marginRight: 10,
   minWidth: 150,
-  minheight: 30,
-  marginBottom: 5,
+  minHeight: 30,
   textAlign: 'center',
 };
