@@ -18,5 +18,6 @@ How use application:
 Sequence of processing data and creating json file.
 
 1 . In the root directory run "node index.js". Will be created file "mentor-student.json" in "root/src/"
+
 2. By command npm run start you can run development server and use the application.
 All mistakes in ".xlsx" files correct in script.
