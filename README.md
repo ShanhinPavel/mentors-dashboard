@@ -5,13 +5,18 @@ Link to github pages: https://shanhinpavel.github.io/mentors-dashboard
 
 Screenshots - https://imgur.com/zP8y7BC, https://imgur.com/yTaPC4Y
 
-Project:
-1.Process data in "xlsx" files by node-xls library
 Description of project.
+
+1.Process data in "xlsx" files by node-xls library
+
 2.Checks mistakes in "xlsx" files.
+
 3.Merges data from these files to "json" file.
+
 4.Downloads data to webpage
+
 5.Draws a dashboard from "json" file by using React.
+
 6.Makes build using webpack and post files to github pages.
 
 How use application:
