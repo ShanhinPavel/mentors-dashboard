@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/mentors-dashboard/static/js/runtime~main.f3fb3b12.js"
   },
   {
-    "revision": "7221d6b4f4f1df52f320",
-    "url": "/mentors-dashboard/static/js/main.7221d6b4.chunk.js"
+    "revision": "f4418ce9ba3ac7dd6fdb",
+    "url": "/mentors-dashboard/static/js/main.f4418ce9.chunk.js"
   },
   {
     "revision": "0793cbed584305db8420",
     "url": "/mentors-dashboard/static/js/2.0793cbed.chunk.js"
   },
   {
-    "revision": "d6a38dca91b509f4361d8cbae5b15485",
+    "revision": "f561a524bd5060965ef246800071ab83",
     "url": "/mentors-dashboard/index.html"
   }
 ];
