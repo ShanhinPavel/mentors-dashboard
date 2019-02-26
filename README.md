@@ -12,8 +12,11 @@ Description of project.
 6. Makes build using webpack and post files to github pages.
 
 How use application:
-The "root/gettingData/load_files" contains downloaded ".xlsx" files with data about mentors, tasks, and students tasks. The "root/gettingData/excelToJson" contains functions which process information from ".xlsx" files and create json file named "mentor-student.json" and place it to "root/scr/".
+
+  The "root/gettingData/load_files" contains downloaded ".xlsx" files with data about mentors, tasks, and students tasks. The "root/gettingData/excelToJson" contains functions which process information from ".xlsx" files and create json file named "mentor-student.json" and place it to "root/scr/".
+  
 Sequence of processing data and creating json file.
+
 1 . In the root directory run "node index.js". Will be created file "mentor-student.json" in "root/src/"
 2. By command npm run start you can run development server and use the application.
 All mistakes in ".xlsx" files correct in script.
