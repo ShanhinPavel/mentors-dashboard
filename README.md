@@ -1,6 +1,7 @@
 # mentor-dashboard
 This application shows information about mentors "Rolling scopes" school.
-*Screenshots - https://imgur.com/zP8y7BC, https://imgur.com/yTaPC4Y
+Link: shanhinpavel.github.io/mentors-dashboard
+Screenshots - https://imgur.com/zP8y7BC, https://imgur.com/yTaPC4Y
 
 Project:
 1. Process data in "xlsx" files by node-xls library
