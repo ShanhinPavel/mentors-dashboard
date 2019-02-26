@@ -16,8 +16,8 @@ function Controller(props) {
 }
 
 Controller.propTypes = {
-  markingStudents: PropTypes.object.isRequired,
-  markingTask: PropTypes.object.isRequired,
+  markingStudents: PropTypes.objectOf(PropTypes.string).isRequired,
+  markingTask: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default Controller;

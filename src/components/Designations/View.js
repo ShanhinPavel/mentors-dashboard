@@ -25,8 +25,8 @@ function View(props) {
 }
 
 View.propTypes = {
-  tasksMarkers: PropTypes.objectOf(PropTypes.node).isRequired,
-  studentMarkers: PropTypes.objectOf(PropTypes.node).isRequired,
+  tasksMarkers: PropTypes.arrayOf(PropTypes.node).isRequired,
+  studentMarkers: PropTypes.arrayOf(PropTypes.node).isRequired,
 };
 
 

@@ -11,7 +11,7 @@ import checkMentorName from './utils/checkMentorName';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { userStatus: 'unauthorised', userName: null, message: null };
+    this.state = { userStatus: 'unauthorised', userName: null, message: 'good' };
     this.changeUserPermission = this.changeUserPermission.bind(this);
   }
 
@@ -27,7 +27,7 @@ class App extends React.Component {
     const { condition, mentorName } = checkedMentor;
 
     if (condition) {
-      this.setState({ userStatus: 'authorised', userName: mentorName, message: null });
+      this.setState({ userStatus: 'authorised', userName: mentorName, message: 'good' });
     } if (!condition && (mentorName !== 'logout' || '')) {
       this.setState({ userStatus: 'unauthorised', message: 'error' });
     } else if (!condition) this.setState({ userStatus: 'unauthorised' });

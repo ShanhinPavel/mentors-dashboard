@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import View from './View';
 
+// This component renders header of the application
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,7 @@ class Header extends React.Component {
     this.setState({ userName: inputText });
   }
 
+  // handle click of login button in 'login' component
   login() {
     const { changePermission } = this.props;
     const { userName } = this.state;
@@ -25,6 +27,7 @@ class Header extends React.Component {
     this.setState({ userName: '' });
   }
 
+  // handle click of logout button in 'logout' component
   logout() {
     const { changePermission } = this.props;
     changePermission('logout');
@@ -47,7 +50,7 @@ class Header extends React.Component {
 
 Header.propTypes = {
   changePermission: PropTypes.func.isRequired,
-  data: PropTypes.objectOf(PropTypes.string),
+  data: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 

@@ -4,6 +4,7 @@ import Controller from './Controller';
 import Table from '../Table';
 import { containerStyle } from '../../styles/select';
 
+// This function implements select tag with list of mentors
 class Select extends React.Component {
   constructor(props) {
     super(props);

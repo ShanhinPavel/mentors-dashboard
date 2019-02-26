@@ -25,7 +25,7 @@ function View(props) {
 View.propTypes = {
   onClickLogout: PropTypes.func.isRequired,
   onClickLogin: PropTypes.func.isRequired,
-  data: PropTypes.object.isRequired,
+  data: PropTypes.objectOf(PropTypes.string).isRequired,
   handleChange: PropTypes.func.isRequired,
 };
 

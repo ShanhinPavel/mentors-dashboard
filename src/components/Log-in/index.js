@@ -13,7 +13,7 @@ function Login(props) {
   return (
     <div style={containerStyle}>
       { /* This message appears when user enters wrong login */ }
-      {message === 'error' && <p style={headerP}>Wrong login!</p>}
+      {message === 'error' && <p style={{ color: 'red' }}>Wrong login!</p>}
       <p style={headerP}>Enter github account</p>
       <input type="text" onChange={change} style={{ minHeight: 20 }} />
       <button type="submit" onClick={onClickLogin} style={headerButton}>Login</button>

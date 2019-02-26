@@ -11,6 +11,7 @@ const pStyle = {
   textIndent: 20,
 };
 
+// This function renders info about the application
 export default function Info() {
   return (
     <div style={container}>

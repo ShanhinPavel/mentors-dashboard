@@ -2,7 +2,7 @@ import React from 'react';
 
 /*
   *This function takes collection where "key" it is a color name
-    and "value" it is text for the color
+    and "value" it is text for the color and creates array of nodes(color - text).
 */
 
 const colorContainer = {
@@ -16,7 +16,9 @@ function getListMarkedWithColor(collection) {
   const arrayOfKeys = Object.keys(collection);
 
   // Create list of 'color - value'
-  const markedList = arrayOfKeys.map((color) => {
+  const markedList = arrayOfKeys.map((color, index) => {
+    const id = 1 + index;
+
     const coloredCell = {
       width: 20,
       height: 20,
@@ -24,7 +26,7 @@ function getListMarkedWithColor(collection) {
     };
 
     return (
-      <div style={colorContainer}>
+      <div style={colorContainer} key={id}>
         <div style={coloredCell} />
         <p>{` - ${collection[color]}`}</p>
       </div>
