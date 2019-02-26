@@ -1,6 +1,6 @@
 # mentor-dashboard
 This application shows information about mentors "Rolling scopes" school.
-Link: shanhinpavel.github.io/mentors-dashboard
+Link to github pages: shanhinpavel.github.io/mentors-dashboard
 Screenshots - https://imgur.com/zP8y7BC, https://imgur.com/yTaPC4Y
 
 Project:
